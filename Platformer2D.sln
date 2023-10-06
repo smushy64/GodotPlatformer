@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platformer2D", "Platformer2D.csproj", "{A6287517-50A4-49BE-B770-5B031C409A9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{A6287517-50A4-49BE-B770-5B031C409A9E}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

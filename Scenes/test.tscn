@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbg3klvdfujl6"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_dthx0"]
+[ext_resource type="Texture2D" uid="uid://dva0udd0iwwrk" path="res://Textures/icon.svg" id="2_iyjw4"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4jhyc"]
+friction = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up3ev"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dqp4"]
+size = Vector2(128.125, 128.125)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="RigidBody2D" parent="."]
+position = Vector2(622, 320)
+physics_material_override = SubResource("PhysicsMaterial_4jhyc")
+script = ExtResource("1_dthx0")
+acceleration_speed = 700.0
+stop_drag = 30.0
+jump_force = 600.0
+fall_gravity_scale = 2.5
+
+[node name="PlayerSprite" type="Sprite2D" parent="Player"]
+texture = ExtResource("2_iyjw4")
+
+[node name="PlayerCollider" type="CollisionShape2D" parent="Player"]
+scale = Vector2(6.5, 6.5)
+shape = SubResource("RectangleShape2D_up3ev")
+
+[node name="GroundCheckCenter" type="RayCast2D" parent="Player"]
+position = Vector2(0, 20)
+
+[node name="GroundCheckLeft" type="RayCast2D" parent="Player"]
+position = Vector2(-60, 20)
+
+[node name="GroundCheckRight" type="RayCast2D" parent="Player"]
+position = Vector2(60, 20)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(598, 691)
+scale = Vector2(15.68, 3.2)
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+texture = ExtResource("2_iyjw4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-0.0319138, -0.3125)
+shape = SubResource("RectangleShape2D_1dqp4")
